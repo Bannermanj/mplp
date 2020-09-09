@@ -1,0 +1,80 @@
+{
+  "name": "mplp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Joseph Bannerman",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npx webpack-dev-server --open --hot --mode development",
+    "start": "npx http-server ./lib",
+    "build": "npx jest && npx webpack --mode production",
+    "test": "npx jest"
+  },
+  "jest": {
+    "setupFiles": [
+      "./src/setupEnzyme.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "identity-obj-proxy"
+    }
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.3",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@sentry/react": "^5.20.1",
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "axios": "^0.19.2",
+    "chart.js": "^2.9.3",
+    "classnames": "^2.2.6",
+    "prettier": "^2.0.5",
+    "react": "16.8.6",
+    "react-chartjs-2": "^2.10.0",
+    "react-dom": "16.8.6",
+    "react-feather": "^2.0.8",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "styled-components": "4.2.0",
+    "typescript": "3.4.2"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "7.4.3",
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/preset-env": "7.4.3",
+    "@babel/preset-react": "7.0.0",
+    "@babel/preset-typescript": "7.3.3",
+    "@types/enzyme": "3.9.1",
+    "@types/enzyme-adapter-react-16": "1.0.5",
+    "@types/jest": "24.0.11",
+    "@types/react": "16.8.12",
+    "@types/react-dom": "16.8.3",
+    "@types/styled-components": "4.1.13",
+    "babel-loader": "8.0.5",
+    "babel-plugin-styled-components": "^1.10.0",
+    "css-loader": "^4.2.0",
+    "enzyme": "3.9.0",
+    "enzyme-adapter-react-16": "1.12.1",
+    "enzyme-to-json": "3.3.5",
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.12.3",
+    "jest": "24.7.1",
+    "jest-css-modules": "^2.1.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "source-map-loader": "0.2.4",
+    "style-loader": "^1.2.1",
+    "ts-jest": "^26.1.4",
+    "webpack": "4.29.6",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-hot-middleware": "2.24.3"
+  }
+}
