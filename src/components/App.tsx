@@ -1,12 +1,15 @@
 import React from "react";
 import "./index.scss";
 
+//Import Components
+import PredictionContainer from "./Predictions/PredictionContainer";
+
 class App extends React.Component {
   render() {
     return (
-      <React.Fragment>
-        <h1>Testing</h1>
-      </React.Fragment>
+      <div>
+        <PredictionContainer />
+      </div>
     );
   }
 }

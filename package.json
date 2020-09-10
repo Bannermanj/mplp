@@ -8,8 +8,9 @@
   "scripts": {
     "dev": "npx webpack-dev-server --open --hot --mode development",
     "start": "npx http-server ./lib",
-    "build": "npx jest && npx webpack --mode production",
-    "test": "npx jest"
+    "build": "npx webpack --mode production",
+    "test": "npx jest",
+    "deploy": "aws s3 sync dist/ s3://mypremierleaguepredictions.com"
   },
   "jest": {
     "setupFiles": [
